@@ -9,23 +9,35 @@
             margin: 0;
             padding: 20px;
             display: flex;
-            flex-direction: column; /* Stack elements vertically on small screens */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             background-color: #f0f0f0; /* Fond gris clair pour un meilleur rendu */
             font-family: Arial, sans-serif; /* Add a default font for better readability */
         }
-        h1 {
-            text-align: center; /* Center the heading text */
-            margin-bottom: 20px; /* Space between heading and image */
-            font-size: 1.5rem; /* Responsive font size, scales with viewport */
+        .image-container {
+            position: relative; /* Pour positionner le texte sur l'image */
+            max-width: 100%;
+            display: inline-block; /* Permet de centrer le conteneur */
         }
         img {
             max-width: 100%; /* L'image s'adapte à la largeur de l'écran */
             height: auto;
             border-radius: 8px; /* Optional: Add slight rounding for better aesthetics */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+        }
+        h1 {
+            position: absolute; /* Positionne le texte sur l'image */
+            top: 10px; /* Distance du haut de l'image */
+            left: 50%; /* Centre horizontalement */
+            transform: translateX(-50%); /* Ajuste pour centrer parfaitement */
+            color: white; /* Couleur du texte pour contraste sur l'image */
+            background-color: rgba(255, 0, 0, 0.5); /* Fond semi-transparent pour lisibilité */
+            padding: 5px 10px; /* Espacement autour du texte */
+            border-radius: 4px; /* Coins arrondis */
+            font-size: 1.5rem; /* Taille de police responsive */
+            margin: 0; /* Supprime les marges par défaut */
+            text-align: center; /* Centre le texte */
         }
         /* Media query for very small screens (e.g., phones in portrait) */
         @media (max-width: 480px) {
@@ -34,12 +46,17 @@
             }
             h1 {
                 font-size: 1.2rem; /* Smaller font on tiny screens */
+                top: 5px; /* Reduce top margin on small screens */
+                padding: 3px 8px; /* Adjust padding */
             }
         }
     </style>
 </head>
 <body>
-    <h1>Waiting for password?</h1> <!-- Corrected spelling from "waithing" to "Waiting" -->
-    <img src="monkey.jpg" alt="Waiting for password?">
+      <h1>Waiting for password?</h1>
+    <div class="image-container">
+        <img src="monkey.jpg" alt="Waiting for password?">
+      
+    </div>
 </body>
 </html>
