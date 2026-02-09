@@ -9,19 +9,37 @@
             margin: 0;
             padding: 20px;
             display: flex;
+            flex-direction: column; /* Stack elements vertically on small screens */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             background-color: #f0f0f0; /* Fond gris clair pour un meilleur rendu */
+            font-family: Arial, sans-serif; /* Add a default font for better readability */
+        }
+        h1 {
+            text-align: center; /* Center the heading text */
+            margin-bottom: 20px; /* Space between heading and image */
+            font-size: 1.5rem; /* Responsive font size, scales with viewport */
         }
         img {
             max-width: 100%; /* L'image s'adapte à la largeur de l'écran */
             height: auto;
+            border-radius: 8px; /* Optional: Add slight rounding for better aesthetics */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+        }
+        /* Media query for very small screens (e.g., phones in portrait) */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px; /* Reduce padding on small screens */
+            }
+            h1 {
+                font-size: 1.2rem; /* Smaller font on tiny screens */
+            }
         }
     </style>
 </head>
 <body>
-    <h1>waithing for password ?</h1>
-    <img src="monkey.jpg" alt="waithing for password ?">
+    <h1>Waiting for password?</h1> <!-- Corrected spelling from "waithing" to "Waiting" -->
+    <img src="monkey.jpg" alt="Waiting for password?">
 </body>
 </html>
